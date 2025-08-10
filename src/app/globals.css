@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
@@ -57,52 +59,50 @@
   }
 }
 
-/* より濃い文字色のカスタマイズ */
-.text-gray-600 {
-  color: #4b5563 !important;
+/* カスタムスタイル - 文字を濃くする */
+@layer utilities {
+  .text-dark {
+    color: #1f2937 !important;
+  }
+  
+  .text-medium {
+    color: #4b5563 !important;
+  }
+  
+  .text-light {
+    color: #6b7280 !important;
+  }
 }
 
-.text-gray-700 {
-  color: #374151 !important;
+/* ボタンのアウトラインバリアントを明示的にスタイリング */
+@layer components {
+  button[data-variant="outline"],
+  .btn-outline {
+    @apply bg-white border-2 border-blue-500 text-blue-500 font-medium hover:bg-blue-50 hover:border-blue-600 hover:text-blue-600 transition-all;
+  }
+  
+  button[data-variant="outline"]:disabled,
+  .btn-outline:disabled {
+    @apply opacity-50 cursor-not-allowed hover:bg-white hover:text-blue-500 hover:border-blue-500;
+  }
 }
 
-.text-muted-foreground {
-  color: #6b7280 !important;
+/* フォーカススタイル */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }
 
-/* ボタンのスタイル調整 */
-button[data-slot="button"] {
-  cursor: pointer;
+/* スクロールバーのスタイル */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-button[data-slot="button"]:not(:disabled):hover {
-  opacity: 0.9;
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded;
 }
 
-/* カード説明文の文字色を濃くする */
-[data-slot="card-description"] {
-  color: #6b7280 !important;
-}
-
-/* ボタンvariant="outline"の修正 - shadcn/uiのButton用 */
-button[data-variant="outline"],
-.btn-outline,
-[class*="outline"] button {
-  background-color: white !important;
-  border: 2px solid #3b82f6 !important;
-  color: #3b82f6 !important;
-  font-weight: 500 !important;
-}
-
-button[data-variant="outline"]:hover:not(:disabled),
-.btn-outline:hover:not(:disabled),
-[class*="outline"] button:hover:not(:disabled) {
-  background-color: #3b82f6 !important;
-  color: white !important;
-}
-
-/* ボタンが見えやすいように追加のスタイル */
-button {
-  min-height: 2.5rem;
-  font-weight: 500;
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded hover:bg-gray-500;
 }
