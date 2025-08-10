@@ -1,6 +1,6 @@
 import { IQuestionRepository } from '../../application/interfaces/IQuestionRepository'
 import { Question } from '../../domain/entities/Question'
-import { DiagnosisType } from '../../domain/types'
+import { DiagnosisType, QuestionOption, MBTIAxis, DNAType, QuestionCategory } from '../../domain/types'
 import quickQuestionsData from '../../../data/questions/quick-questions.json'
 import fullQuestionsData from '../../../data/questions/full-questions.json'
 
@@ -23,8 +23,14 @@ export class StaticQuestionRepository implements IQuestionRepository {
       Question.create({
         id: q.id,
         text: q.text,
-        options: q.options,
-        category: q.category,
+        options: q.options.map(o => ({
+          value: o.value,
+          text: o.text,
+          score: o.score,
+          mbtiAxis: 'mbtiAxis' in o ? o.mbtiAxis as MBTIAxis : undefined,
+          dna: 'dna' in o ? o.dna as DNAType : undefined
+        })) as QuestionOption[],
+        category: q.category as QuestionCategory,
         subcategory: q.subcategory,
         weight: q.weight
       })
@@ -32,12 +38,18 @@ export class StaticQuestionRepository implements IQuestionRepository {
 
     // フル診断の質問をロード（まだファイルがない場合はクイック診断の質問を使用）
     try {
-      this.fullQuestions = fullQuestionsData.questions.map(q =>
+      this.fullQuestions = fullQuestionsData.questions.filter((q) => q.id !== 'placeholder_note').map(q =>
         Question.create({
           id: q.id,
           text: q.text,
-          options: q.options,
-          category: q.category,
+          options: q.options.map((o) => ({
+            value: o.value,
+            text: o.text,
+            score: o.score,
+            mbtiAxis: 'mbtiAxis' in o ? o.mbtiAxis as MBTIAxis : undefined,
+            dna: 'dna' in o ? o.dna as DNAType : undefined
+          })) as QuestionOption[],
+          category: q.category as QuestionCategory,
           subcategory: q.subcategory,
           weight: q.weight
         })
@@ -53,7 +65,7 @@ export class StaticQuestionRepository implements IQuestionRepository {
   /**
    * 診断タイプに応じた質問を取得
    */
-  async getByType(type: DiagnosisType): Promise<Question[]> {
+  async getQuestions(type: DiagnosisType): Promise<Question[]> {
     await this.initialize()
     
     return type === 'quick' 
@@ -77,7 +89,7 @@ export class StaticQuestionRepository implements IQuestionRepository {
   /**
    * すべての質問を取得
    */
-  async getAll(): Promise<Question[]> {
+  async getAllQuestions(): Promise<Question[]> {
     await this.initialize()
     
     // 重複を除いたすべての質問を返す
@@ -95,7 +107,7 @@ export class StaticQuestionRepository implements IQuestionRepository {
   async getByCategory(category: string): Promise<Question[]> {
     await this.initialize()
     
-    const allQuestions = await this.getAll()
+    const allQuestions = await this.getAllQuestions()
     return allQuestions.filter(q => q.category === category)
   }
 
@@ -105,7 +117,7 @@ export class StaticQuestionRepository implements IQuestionRepository {
   async getBySubcategory(subcategory: string): Promise<Question[]> {
     await this.initialize()
     
-    const allQuestions = await this.getAll()
+    const allQuestions = await this.getAllQuestions()
     return allQuestions.filter(q => q.subcategory === subcategory)
   }
 }

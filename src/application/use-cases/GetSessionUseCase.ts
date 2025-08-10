@@ -68,7 +68,7 @@ export class GetSessionUseCase {
       return null
     }
 
-    return session.getCurrentQuestion()
+    return session.getCurrentQuestion() || null
   }
 
   /**

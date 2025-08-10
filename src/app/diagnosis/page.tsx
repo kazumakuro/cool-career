@@ -45,7 +45,8 @@ export default function DiagnosisPage() {
       startResponseTimer()
       setSelectedAnswer(null)
     }
-  }, [session?.getCurrentIndex(), startResponseTimer])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session?.getCurrentIndex()])
 
   // エラーハンドリング
   useEffect(() => {

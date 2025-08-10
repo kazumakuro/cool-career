@@ -3,6 +3,7 @@ import { DiagnosisResult } from '../../domain/value-objects/DiagnosisResult'
 import { MBTIType } from '../../domain/value-objects/MBTIType'
 import { CareerDNA } from '../../domain/value-objects/CareerDNA'
 import { DNAScores } from '../../domain/types'
+import { SerializedDiagnosisResult } from './types'
 
 /**
  * LocalStorageベースの結果リポジトリ実装
@@ -98,14 +99,14 @@ export class LocalStorageResultRepository implements IResultRepository {
   /**
    * 結果データのシリアライズ
    */
-  private serialize(result: DiagnosisResult): any {
+  private serialize(result: DiagnosisResult): SerializedDiagnosisResult {
     return {
       id: result.id,
       sessionId: result.sessionId,
       mbtiType: result.mbtiType.toString(),
       careerDNA: {
         primary: result.careerDNA.primary,
-        secondary: result.careerDNA.secondary,
+        secondary: result.careerDNA.secondary || null,
         scores: result.careerDNA.scores
       },
       combinedType: result.combinedType,
@@ -117,7 +118,7 @@ export class LocalStorageResultRepository implements IResultRepository {
   /**
    * 結果データのデシリアライズ
    */
-  private deserialize(data: any): DiagnosisResult {
+  private deserialize(data: SerializedDiagnosisResult): DiagnosisResult {
     const mbtiType = MBTIType.fromString(data.mbtiType)
     const careerDNA = CareerDNA.fromScores(data.careerDNA.scores as DNAScores)
     
@@ -135,7 +136,7 @@ export class LocalStorageResultRepository implements IResultRepository {
   /**
    * すべての結果を取得
    */
-  private getAllResults(): Record<string, any> {
+  private getAllResults(): Record<string, SerializedDiagnosisResult> {
     if (typeof window === 'undefined') return {}
     
     const data = localStorage.getItem(this.STORAGE_KEY)
@@ -145,7 +146,7 @@ export class LocalStorageResultRepository implements IResultRepository {
   /**
    * 結果を保存
    */
-  private saveResults(results: Record<string, any>): void {
+  private saveResults(results: Record<string, SerializedDiagnosisResult>): void {
     if (typeof window === 'undefined') return
     
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(results))

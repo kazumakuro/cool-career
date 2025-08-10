@@ -31,7 +31,7 @@ export class StartDiagnosisUseCase {
     }
 
     // 質問を取得
-    const questions = await this.questionRepository.getByType(type)
+    const questions = await this.questionRepository.getQuestions(type)
     
     if (questions.length === 0) {
       throw new Error(`No questions found for diagnosis type: ${type}`)

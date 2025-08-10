@@ -2,7 +2,8 @@ import { ISessionRepository } from '../../application/interfaces/ISessionReposit
 import { DiagnosisSession } from '../../domain/entities/DiagnosisSession'
 import { Question } from '../../domain/entities/Question'
 import { Answer } from '../../domain/entities/Answer'
-import { DiagnosisType } from '../../domain/types'
+import { DiagnosisType, MBTIAxis, DNAType, QuestionCategory } from '../../domain/types'
+import { SerializedSession } from './types'
 
 /**
  * LocalStorageベースのセッションリポジトリ実装
@@ -78,7 +79,6 @@ export class LocalStorageSessionRepository implements ISessionRepository {
    */
   async deleteExpired(): Promise<void> {
     const sessions = this.getAllSessions()
-    const now = Date.now()
     
     Object.keys(sessions).forEach(id => {
       if (this.isExpired(sessions[id].startedAt)) {
@@ -92,7 +92,7 @@ export class LocalStorageSessionRepository implements ISessionRepository {
   /**
    * セッションデータのシリアライズ
    */
-  private serialize(session: DiagnosisSession): any {
+  private serialize(session: DiagnosisSession): SerializedSession {
     return {
       id: session.id,
       type: session.type,
@@ -100,9 +100,15 @@ export class LocalStorageSessionRepository implements ISessionRepository {
       questions: session.questions.map(q => ({
         id: q.id,
         text: q.text,
-        options: q.options,
-        category: q.category,
-        subcategory: q.subcategory,
+        options: q.options.map(o => ({
+          value: o.value,
+          text: o.text,
+          score: o.score || 0,
+          mbtiAxis: o.mbtiAxis,
+          dna: o.dna
+        })),
+        category: q.category as string,
+        subcategory: q.subcategory || '',
         weight: q.weight
       })),
       answers: session.getAnswers().map(a => ({
@@ -118,21 +124,27 @@ export class LocalStorageSessionRepository implements ISessionRepository {
   /**
    * セッションデータのデシリアライズ
    */
-  private deserialize(data: any): DiagnosisSession {
+  private deserialize(data: SerializedSession): DiagnosisSession {
     // 質問を復元
-    const questions = data.questions.map((q: any) => 
+    const questions = data.questions.map((q) => 
       Question.create({
         id: q.id,
         text: q.text,
-        options: q.options,
-        category: q.category,
+        options: q.options.map((o) => ({
+          value: o.value,
+          text: o.text,
+          score: o.score,
+          mbtiAxis: o.mbtiAxis as MBTIAxis | undefined,
+          dna: o.dna as DNAType | undefined
+        })),
+        category: q.category as QuestionCategory,
         subcategory: q.subcategory,
         weight: q.weight
       })
     )
 
     // 回答を復元
-    const answers = data.answers.map((a: any) =>
+    const answers = data.answers.map((a) =>
       Answer.create({
         questionId: a.questionId,
         value: a.value,
@@ -155,7 +167,7 @@ export class LocalStorageSessionRepository implements ISessionRepository {
   /**
    * すべてのセッションを取得
    */
-  private getAllSessions(): Record<string, any> {
+  private getAllSessions(): Record<string, SerializedSession> {
     if (typeof window === 'undefined') return {}
     
     const data = localStorage.getItem(this.STORAGE_KEY)
@@ -165,7 +177,7 @@ export class LocalStorageSessionRepository implements ISessionRepository {
   /**
    * セッションを保存
    */
-  private saveSessions(sessions: Record<string, any>): void {
+  private saveSessions(sessions: Record<string, SerializedSession>): void {
     if (typeof window === 'undefined') return
     
     localStorage.setItem(this.STORAGE_KEY, JSON.stringify(sessions))

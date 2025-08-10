@@ -212,7 +212,7 @@ export class DiagnosisCalculator {
   /**
    * 回答パターンの一貫性をチェック
    */
-  private checkConsistency(answers: ReadonlyArray<Answer>): number {
+  private checkConsistency(_answers: ReadonlyArray<Answer>): number {
     // 実装例：似た質問への回答の一貫性をチェック
     // ここでは簡略化のため、常に高い一貫性を返す
     return 0.95

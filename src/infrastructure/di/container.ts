@@ -96,7 +96,7 @@ export class DIContainer {
    * テスト用：インスタンスをリセット
    */
   static reset(): void {
-    DIContainer.instance = undefined as any
+    DIContainer.instance = undefined as unknown as DIContainer
   }
 }
 

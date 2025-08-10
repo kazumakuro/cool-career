@@ -52,6 +52,8 @@ export default function ResultPage() {
   }
 
   const typeDescription = result.getTypeDescription()
+  const mbtiTraits = `${result.mbtiType.getCategory()}として、${result.mbtiType.toString()}の特性を持っています`
+  const careerTraits = `${result.careerDNA.getJapaneseName()}として${result.careerDNA.getDescription()}`
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 py-8">
@@ -134,7 +136,7 @@ export default function ResultPage() {
                       {result.mbtiType.toString()}
                     </p>
                     <p className="text-sm text-gray-600">
-                      {typeDescription.mbtiTraits}
+                      {mbtiTraits}
                     </p>
                   </div>
                   
@@ -191,7 +193,7 @@ export default function ResultPage() {
                       </p>
                     )}
                     <p className="text-sm text-gray-600 mt-2">
-                      {typeDescription.careerTraits}
+                      {careerTraits}
                     </p>
                   </div>
                   
