@@ -29,10 +29,11 @@ export class DiagnosisSession {
       throw new Error('Questions are required for diagnosis session')
     }
 
-    const expectedQuestionCount = type === 'quick' ? 30 : 70
-    if (questions.length !== expectedQuestionCount) {
+    // 質問数のバリデーションを緩和（フル診断はまだ開発中のため）
+    const minQuestionCount = type === 'quick' ? 30 : 5  // フル診断は最低5問から
+    if (questions.length < minQuestionCount) {
       throw new Error(
-        `Invalid question count for ${type} diagnosis. Expected ${expectedQuestionCount}, got ${questions.length}`
+        `Invalid question count for ${type} diagnosis. Expected at least ${minQuestionCount}, got ${questions.length}`
       )
     }
 
