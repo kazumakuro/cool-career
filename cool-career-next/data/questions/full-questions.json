@@ -1,0 +1,129 @@
+{
+  "questions": [
+    {
+      "id": "f1",
+      "text": "あなたの理想的な週末の過ごし方は？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "大勢の友人とパーティーやイベントに参加",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "E_mild",
+          "text": "少人数の友人と外出",
+          "score": 1,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I_mild",
+          "text": "家族とゆっくり過ごす",
+          "score": 1,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "一人で趣味に没頭",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "text": "新しいプロジェクトに取り組むとき、最初にすることは？",
+      "category": "mbti",
+      "subcategory": "S_N",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的な手順とスケジュールを確認",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        },
+        {
+          "value": "N",
+          "text": "全体像と最終目標をイメージ",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "text": "同僚との意見の相違が生じたとき、あなたは？",
+      "category": "mbti",
+      "subcategory": "T_F",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "T",
+          "text": "データと論理で自分の意見を裏付ける",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        },
+        {
+          "value": "F",
+          "text": "相手の立場と感情を理解しようとする",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "text": "仕事の進め方として好むのは？",
+      "category": "mbti",
+      "subcategory": "J_P",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "J",
+          "text": "事前に立てた計画通りに進める",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        },
+        {
+          "value": "P",
+          "text": "状況に応じて柔軟に調整する",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        }
+      ]
+    },
+    {
+      "id": "f5",
+      "text": "初対面の人と会話するとき、あなたは？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "積極的に話題を提供し会話をリード",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "相手の話を聞き、反応を返す",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "placeholder_note",
+      "text": "※これは仮のデータです。70問のフル版は後で実装します",
+      "category": "note",
+      "subcategory": "note",
+      "weight": 0,
+      "options": []
+    }
+  ]
+}

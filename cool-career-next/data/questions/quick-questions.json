@@ -1,0 +1,826 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "text": "週末の理想的な過ごし方は？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "友達と外出して楽しむ",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "E_mild",
+          "text": "人と会うけど、一人の時間も欲しい",
+          "score": 1,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I_mild",
+          "text": "基本的に家でゆっくりしたい",
+          "score": 1,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "一人で趣味に没頭する",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "新しいプロジェクトを始めるとき、あなたは？",
+      "category": "mbti",
+      "subcategory": "S_N",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "S",
+          "text": "過去の成功事例を参考にする",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        },
+        {
+          "value": "N",
+          "text": "全く新しいアプローチを考える",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "重要な決定を下すとき、より重視するのは？",
+      "category": "mbti",
+      "subcategory": "T_F",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "T",
+          "text": "論理的な分析と客観的なデータ",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        },
+        {
+          "value": "F",
+          "text": "人々への影響と感情的な側面",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "仕事のスタイルとして好むのは？",
+      "category": "mbti",
+      "subcategory": "J_P",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "J",
+          "text": "計画を立てて着実に進める",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        },
+        {
+          "value": "P",
+          "text": "状況に応じて柔軟に対応する",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "パーティーやイベントでのあなたは？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "積極的に新しい人と話す",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "親しい人とだけ話す",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "問題解決のアプローチは？",
+      "category": "mbti",
+      "subcategory": "S_N",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的な事実と詳細に注目",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        },
+        {
+          "value": "N",
+          "text": "全体像とパターンを見る",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "チームでの衝突が起きたとき、あなたは？",
+      "category": "mbti",
+      "subcategory": "T_F",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "T",
+          "text": "事実を整理して論理的に解決",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        },
+        {
+          "value": "F",
+          "text": "感情に配慮して調和を重視",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "締切に対する態度は？",
+      "category": "mbti",
+      "subcategory": "J_P",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "J",
+          "text": "余裕を持って早めに完了",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        },
+        {
+          "value": "P",
+          "text": "締切ギリギリまで粘る",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "エネルギーを充電する方法は？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "人と会って話すこと",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "一人で静かに過ごすこと",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "学習するときの好みは？",
+      "category": "mbti",
+      "subcategory": "S_N",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "S",
+          "text": "実践的で具体的な例から学ぶ",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        },
+        {
+          "value": "N",
+          "text": "理論や概念から理解する",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "批判を受けたとき、最初に考えるのは？",
+      "category": "mbti",
+      "subcategory": "T_F",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "T",
+          "text": "批判の内容が正しいかどうか",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        },
+        {
+          "value": "F",
+          "text": "相手がなぜそう感じたか",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "旅行の計画は？",
+      "category": "mbti",
+      "subcategory": "J_P",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "J",
+          "text": "詳細なスケジュールを立てる",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        },
+        {
+          "value": "P",
+          "text": "大まかな方向だけ決めて自由に",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "会議での役割は？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "積極的に発言しリードする",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "じっくり聞いて要所で発言",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "説明するときのスタイルは？",
+      "category": "mbti",
+      "subcategory": "S_N",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "S",
+          "text": "順序立てて詳細に説明",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        },
+        {
+          "value": "N",
+          "text": "要点を掴んで大まかに説明",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "褒められたとき、より嬉しいのは？",
+      "category": "mbti",
+      "subcategory": "T_F",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "T",
+          "text": "能力や成果を認められる",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        },
+        {
+          "value": "F",
+          "text": "人柄や思いやりを評価される",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "生活のリズムは？",
+      "category": "mbti",
+      "subcategory": "J_P",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "J",
+          "text": "規則正しいルーティン",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        },
+        {
+          "value": "P",
+          "text": "その日の気分で変わる",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "ストレス発散方法は？",
+      "category": "mbti",
+      "subcategory": "E_I",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "E",
+          "text": "友達と出かけて発散",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        },
+        {
+          "value": "I",
+          "text": "一人で趣味に没頭",
+          "score": 2,
+          "mbtiAxis": "E_I"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "仕事で重視するのは？",
+      "category": "mbti",
+      "subcategory": "S_N",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "S",
+          "text": "確実な成果と実績",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        },
+        {
+          "value": "N",
+          "text": "可能性と将来性",
+          "score": 2,
+          "mbtiAxis": "S_N"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "議論するとき重視するのは？",
+      "category": "mbti",
+      "subcategory": "T_F",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "T",
+          "text": "正しさと論理的一貫性",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        },
+        {
+          "value": "F",
+          "text": "相手の気持ちと関係性",
+          "score": 2,
+          "mbtiAxis": "T_F"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "変化に対する態度は？",
+      "category": "mbti",
+      "subcategory": "J_P",
+      "weight": 1.0,
+      "options": [
+        {
+          "value": "J",
+          "text": "慎重に準備してから対応",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        },
+        {
+          "value": "P",
+          "text": "変化を楽しみながら適応",
+          "score": 2,
+          "mbtiAxis": "J_P"
+        }
+      ]
+    },
+    {
+      "id": "dna1",
+      "text": "理想的な仕事環境は？",
+      "category": "dna",
+      "subcategory": "workstyle",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "新しいことに挑戦できる環境",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "組織を大きく成長させられる環境",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "専門性を極められる環境",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "人との繋がりを大切にできる環境",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "安定して長く働ける環境",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna2",
+      "text": "やりがいを感じるのは？",
+      "category": "dna",
+      "subcategory": "motivation",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "誰もやったことのないことを成し遂げる",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "チームや組織を成功に導く",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "自分の技術や知識が認められる",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "人々を幸せにする",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "確実に責任を果たす",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna3",
+      "text": "チームでの理想的な役割は？",
+      "category": "dna",
+      "subcategory": "teamwork",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "新しいアイデアを出す人",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "全体を統括するリーダー",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "専門知識を提供する人",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "メンバーをつなぐ調整役",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "品質を保証する番人",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna4",
+      "text": "5年後の理想の姿は？",
+      "category": "dna",
+      "subcategory": "future",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "独立して新しいビジネスを立ち上げている",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "大きな組織のマネージャーとして活躍",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "その分野の第一人者として認知される",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "多くの人に頼られる存在になる",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "安定した地位で着実にキャリアを積む",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna5",
+      "text": "失敗に対する考え方は？",
+      "category": "dna",
+      "subcategory": "mindset",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "失敗は新しい発見のチャンス",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "失敗から学んで組織を強くする",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "失敗を分析して専門性を高める",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "失敗をチームで共有して絆を深める",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "失敗を防ぐ仕組みを作る",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna6",
+      "text": "成功の定義は？",
+      "category": "dna",
+      "subcategory": "values",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "世界を変えるような革新を起こす",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "大きな成果を組織として達成する",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "自分の分野で最高峰に到達する",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "多くの人を幸せにする",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "安定した生活と信頼を築く",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna7",
+      "text": "学習のスタイルは？",
+      "category": "dna",
+      "subcategory": "learning",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "試行錯誤しながら新しい方法を見つける",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "体系的に学んで応用する",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "一つの分野を深く掘り下げる",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "人から学び、人に教える",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "確実な方法を着実に身につける",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna8",
+      "text": "モチベーションの源泉は？",
+      "category": "dna",
+      "subcategory": "motivation",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "未知への挑戦",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "成長と達成感",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "専門性への誇り",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "人との繋がり",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "安定と信頼",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna9",
+      "text": "理想的なキャリアパスは？",
+      "category": "dna",
+      "subcategory": "career",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "起業や新規事業立ち上げ",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "マネジメントや経営層",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "専門職やエキスパート",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "人事や営業などの対人職",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "安定した大企業や公務員",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    },
+    {
+      "id": "dna10",
+      "text": "仕事で避けたいことは？",
+      "category": "dna",
+      "subcategory": "avoid",
+      "weight": 1.5,
+      "options": [
+        {
+          "value": "pioneer",
+          "text": "ルーティンワークや前例踏襲",
+          "score": 3,
+          "dna": "Pioneer"
+        },
+        {
+          "value": "builder",
+          "text": "成長の機会がない環境",
+          "score": 3,
+          "dna": "Builder"
+        },
+        {
+          "value": "specialist",
+          "text": "浅く広くの仕事",
+          "score": 3,
+          "dna": "Specialist"
+        },
+        {
+          "value": "connector",
+          "text": "人との関わりが少ない仕事",
+          "score": 3,
+          "dna": "Connector"
+        },
+        {
+          "value": "guardian",
+          "text": "不安定で予測不能な環境",
+          "score": 3,
+          "dna": "Guardian"
+        }
+      ]
+    }
+  ]
+}
